@@ -13,4 +13,83 @@
         <maven.compiler.target>11</maven.compiler.target>
     </properties>
 
+    <dependencies>
+
+        <!-- https://mvnrepository.com/artifact/io.github.bonigarcia/webdrivermanager -->
+
+        <dependency>
+
+            <groupId>io.github.bonigarcia</groupId>
+
+            <artifactId>webdrivermanager</artifactId>
+
+            <version>5.0.1</version>
+
+        </dependency>
+
+        <!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java -->
+
+        <dependency>
+
+            <groupId>org.seleniumhq.selenium</groupId>
+
+            <artifactId>selenium-java</artifactId>
+
+            <version>4.1.0</version>
+
+        </dependency>
+
+        <!-- https://mvnrepository.com/artifact/org.testng/testng -->
+
+        <dependency>
+
+            <groupId>org.testng</groupId>
+
+            <artifactId>testng</artifactId>
+
+            <version>7.1.0</version>
+
+            <scope>test</scope>
+
+        </dependency>
+
+        <!-- https://mvnrepository.com/artifact/com.codoid.products/fillo -->
+
+        <dependency>
+
+            <groupId>com.codoid.products</groupId>
+
+            <artifactId>fillo</artifactId>
+
+            <version>1.20</version>
+
+        </dependency>
+
+        <!--extent reports dependencies-->
+
+        <dependency>
+
+            <groupId>com.aventstack</groupId>
+
+            <artifactId>extentreports</artifactId>
+
+            <version>5.0.0</version>
+
+        </dependency>
+
+        <!-- https://mvnrepository.com/artifact/mysql/mysql-connector-java -->
+
+        <dependency>
+
+            <groupId>mysql</groupId>
+
+            <artifactId>mysql-connector-java</artifactId>
+
+            <version>8.0.18</version>
+
+        </dependency>
+
+
+    </dependencies>
+
 </project>
