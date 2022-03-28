@@ -1,8 +1,11 @@
 package com.ilab_web_automation.pageObjects;
 
+import com.aventstack.extentreports.ExtentTest;
+import com.ilab_web_automation.reports.reports;
 import com.ilab_web_automation.webPageObjects.*;
 import com.ilab_web_automation.webUtilities.webActions;
 import org.openqa.selenium.WebDriver;
+import org.testng.Assert;
 
 public class webFunctions extends webActions {
 
@@ -29,7 +32,7 @@ public class webFunctions extends webActions {
     }
 
     //Pass information into the form
-    public void populateApplicationForm(WebDriver driver,String firstName,String emailAddress,String phoneNumber){
+    public void populateApplicationForm(WebDriver driver, String firstName, String emailAddress, String phoneNumber){
 
         iLabApplicationForm appForm = new iLabApplicationForm(driver);
 
@@ -41,8 +44,10 @@ public class webFunctions extends webActions {
 
             clickObject(appForm.sendApplicationButton,driver);
 
+
         }catch (Exception e){
             System.out.println("Failed to submit the application form : " + e.getMessage());
+            Assert.fail();
         }
 
     }

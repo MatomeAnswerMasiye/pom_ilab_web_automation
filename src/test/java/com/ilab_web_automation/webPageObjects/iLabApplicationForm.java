@@ -31,6 +31,7 @@ public class iLabApplicationForm{
     @FindBy(xpath = "//*[@id=\"wpjb_submit\"]\n")
     public WebElement sendApplicationButton;
 
-
+    @FindBy(xpath = "//*[@id=\"wpjb-apply-form\"]/fieldset[1]/div[5]/div/ul/li")
+    public WebElement errorMessage;
 
 }

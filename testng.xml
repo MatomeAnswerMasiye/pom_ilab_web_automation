@@ -12,22 +12,22 @@
         </classes>
     </test>
 
-<!--    &lt;!&ndash;Test runs using firefox browser&ndash;&gt;-->
-<!--    <test name="fireFoxTest">-->
-<!--        <parameter name="url" value="https://www.ilabquality.com/"></parameter>-->
-<!--        <parameter name="browser" value="firefox"></parameter>-->
-<!--        <classes>-->
-<!--            <class name="com.ilab_web_automation.webTests.testRunner"></class>-->
-<!--        </classes>-->
-<!--    </test>-->
+    <!--Test runs using firefox browser-->
+    <test name="fireFoxTest">
+        <parameter name="url" value="https://www.ilabquality.com/"></parameter>
+        <parameter name="browser" value="firefox"></parameter>
+        <classes>
+            <class name="com.ilab_web_automation.webTests.testRunner"></class>
+        </classes>
+    </test>
 
-<!--    &lt;!&ndash;Test runs using internet explorer browser&ndash;&gt;-->
-<!--    <test name="IETest">-->
-<!--        <parameter name="url" value="https://www.ilabquality.com/"></parameter>-->
-<!--        <parameter name="browser" value="ie"></parameter>-->
-<!--        <classes>-->
-<!--            <class name="com.ilab_web_automation.webTests.testRunner"></class>-->
-<!--        </classes>-->
-<!--    </test>-->
+    <!--Test runs using internet explorer browser-->
+    <test name="IETest">
+        <parameter name="url" value="https://www.ilabquality.com/"></parameter>
+        <parameter name="browser" value="ie"></parameter>
+        <classes>
+            <class name="com.ilab_web_automation.webTests.testRunner"></class>
+        </classes>
+    </test>
 
 </suite>
