@@ -19,6 +19,9 @@ public class iLabApplicationForm{
         PageFactory.initElements(new AjaxElementLocatorFactory(driver, 10), this);
     }
 
+    @FindBy(xpath = "//*[@id=\"wpjb-apply-form\"]")
+    public WebElement applicationForm;
+
     @FindBy(xpath = "//*[@id=\"applicant_name\"]")
     public WebElement txtName;
 
@@ -27,6 +30,7 @@ public class iLabApplicationForm{
 
     @FindBy(xpath = "//*[@id=\"phone\"]")
     public WebElement phone;
+
 
     @FindBy(xpath = "//*[@id=\"wpjb_submit\"]\n")
     public WebElement sendApplicationButton;

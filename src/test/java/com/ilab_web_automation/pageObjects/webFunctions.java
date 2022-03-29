@@ -1,11 +1,15 @@
 package com.ilab_web_automation.pageObjects;
 
-import com.aventstack.extentreports.ExtentTest;
-import com.ilab_web_automation.reports.reports;
 import com.ilab_web_automation.webPageObjects.*;
 import com.ilab_web_automation.webUtilities.webActions;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebDriverException;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.FluentWait;
+import org.openqa.selenium.support.ui.Wait;
 import org.testng.Assert;
+
+import java.time.Duration;
 
 public class webFunctions extends webActions {
 
@@ -36,12 +40,22 @@ public class webFunctions extends webActions {
 
         iLabApplicationForm appForm = new iLabApplicationForm(driver);
 
+        //Waits for the form to be visible/displayed before attempting to populate the fields
+        Wait<WebDriver> wait = new FluentWait<>(driver)
+                .withTimeout(Duration.ofSeconds(5))
+                .pollingEvery(Duration.ofMillis(1000))
+                .ignoring(WebDriverException.class);
+        wait.until(ExpectedConditions.visibilityOf(appForm.applicationForm));
+
         //pass data into the form and submit
         try{
+
+            //Populates the form
             passData(appForm.txtName,driver,firstName);
             passData(appForm.txtEmail,driver,emailAddress);
             passData(appForm.phone,driver, phoneNumber);
 
+            //Submits the form
             clickObject(appForm.sendApplicationButton,driver);
 
 

@@ -22,15 +22,12 @@ public class generatePhoneNumber {
         int upperBoundForSecondThree = 1000;
         int secondThree =  rand.nextInt(upperBoundForSecondThree);
 
-
         //Last four digits of the phone number
         int upperBoundForLastFour = 10000;
         int lastFour = rand.nextInt(upperBoundForLastFour);
 
-
         //concatenate the number groups
         String phoneNumber = firstThree + " " + secondThree + " " + lastFour;
-
 
         //phoneNumber that will be returned when the method is invoked
         return phoneNumber;
