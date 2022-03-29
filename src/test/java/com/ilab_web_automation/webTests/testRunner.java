@@ -3,6 +3,7 @@ package com.ilab_web_automation.webTests;
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
 import com.ilab_web_automation.data.dataConnector;
+import com.ilab_web_automation.numberGenerator.generatePhoneNumber;
 import com.ilab_web_automation.pageObjects.webFunctions;
 import com.ilab_web_automation.reports.reports;
 import com.ilab_web_automation.validations.validations;
@@ -20,6 +21,7 @@ public class testRunner {
     webFunctions functions = new webFunctions();
     dataConnector connector = new dataConnector();
     validations validate = new validations();
+    generatePhoneNumber generatePhone = new generatePhoneNumber();
     reports repo = new reports();
     ExtentReports extentRepo;
     String sUrl,sBrowser;
@@ -50,6 +52,7 @@ public class testRunner {
         //Initialize extent reports
        extentRepo = repo.initializeReports("reports/extentReport.html");
 
+
     }
 
     //A method that runs the test
@@ -72,8 +75,9 @@ public class testRunner {
                 String applicantName = ilabApplicationSet.getString("firstName");
                 String applicantEmail = ilabApplicationSet.getString("emailAddress");
 
-                functions.populateApplicationForm(web.getWebDriver(), applicantName, applicantEmail,"083 568 7859");
+                functions.populateApplicationForm(web.getWebDriver(), applicantName, applicantEmail,generatePhone.generate());
                 validate.validateApplication(web.getWebDriver(),node);
+
             }
 
         }catch (Exception e){

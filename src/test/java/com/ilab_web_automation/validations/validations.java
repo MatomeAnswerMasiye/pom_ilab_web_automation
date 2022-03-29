@@ -35,9 +35,12 @@ public class validations {
             if(appForm.errorMessage.isDisplayed()){
 
                 node.pass("Error message displayed",MediaEntityBuilder.createScreenCaptureFromBase64String(filename).build());
+
             }else{
+
                 node.fail("Error message not displayed",MediaEntityBuilder.createScreenCaptureFromBase64String(filename).build());
                 Assert.fail("Error message not displayed");
+
             }
 
         }catch (Exception e){
