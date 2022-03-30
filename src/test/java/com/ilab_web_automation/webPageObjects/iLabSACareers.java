@@ -19,8 +19,7 @@ public class iLabSACareers {
         PageFactory.initElements(new AjaxElementLocatorFactory(driver, 10), this);
     }
 
-    @FindBy(xpath = "/html/body/section/div[2]/div/div/div/div[3]/div[2]/div/div/div/div/div/div[1]/div[1]/div[2]/div[1]/a")
+    @FindBy(xpath = "(//a[@class = 'wpjb-job_title wpjb-title'])[1]")
     public WebElement firstCurrentOpening;
-
 
 }

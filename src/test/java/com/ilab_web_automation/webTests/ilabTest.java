@@ -15,7 +15,7 @@ import org.testng.annotations.Test;
 
 import java.sql.ResultSet;
 
-public class testRunner {
+public class ilabTest {
 
     webUtilities web = new webUtilities();
     webFunctions functions = new webFunctions();
@@ -57,9 +57,9 @@ public class testRunner {
 
     //A method that runs the test
     @Test
-    public void negativeTest(){
+    public void iLabApplicationTest(){
 
-        ExtentTest test = extentRepo.createTest("File upload test").assignAuthor("Matome Answer Masiye");
+        ExtentTest test = extentRepo.createTest("iLab job application test").assignAuthor("Matome Answer Masiye");
         ExtentTest node;
 
         try{
@@ -67,7 +67,7 @@ public class testRunner {
             //Invokes the function that navigates to the application form
             functions.navigateToForm(web.getWebDriver());
 
-            //Reads data from the database and populates the application form
+            //Reads data from the database,populates the application form and submit it
             while(ilabApplicationSet.next()){
 
                 node = test.createNode("Testing using : " + sBrowser);

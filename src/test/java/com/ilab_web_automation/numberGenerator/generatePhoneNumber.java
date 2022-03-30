@@ -10,13 +10,16 @@ public class generatePhoneNumber {
         //Instantiate an object that's going to be used to generate random numbers
         Random rand = new Random();
 
-        int countryCode = 0;
-        int[] carrierId = {6,7,8};
-        int afterCarrierInd = rand.nextInt(10);
-        int randomIndex = rand.nextInt(carrierId.length);
-
         //First three digits of the phone number
-        String firstThree = countryCode + "" + carrierId[randomIndex] + "" + afterCarrierInd;
+        int firstNum = 0;
+        int[] carrierId = {6,7,8};
+        int afterCarrierId = rand.nextInt(10);
+
+        //Generate a random index used to access a value inside the carrierId array
+        int randomIndexForCarrierId = rand.nextInt(carrierId.length);
+
+        //Concatenate the first three numbers together
+        String firstThree = firstNum + "" + carrierId[randomIndexForCarrierId] + "" + afterCarrierId;
 
         //Second three digits of the phone number
         int upperBoundForSecondThree = 1000;

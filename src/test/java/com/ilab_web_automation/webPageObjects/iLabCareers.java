@@ -19,7 +19,7 @@ public class iLabCareers {
         PageFactory.initElements(new AjaxElementLocatorFactory(driver, 10), this);
     }
 
-    @FindBy(xpath = "//a[text()[contains(.,'South Africa')]]")
+    @FindBy(xpath = "//a[text() = 'South Africa']")
     public WebElement southAfricaLink;
 
 

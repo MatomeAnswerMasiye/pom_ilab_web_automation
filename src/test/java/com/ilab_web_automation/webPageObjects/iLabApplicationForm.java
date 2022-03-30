@@ -35,7 +35,7 @@ public class iLabApplicationForm{
     @FindBy(xpath = "//*[@id=\"wpjb_submit\"]\n")
     public WebElement sendApplicationButton;
 
-    @FindBy(xpath = "//*[@id=\"wpjb-apply-form\"]/fieldset[1]/div[5]/div/ul/li")
+    @FindBy(xpath = "//li[text()[contains(.,'You need to upload at least one file')]]")
     public WebElement errorMessage;
 
 }

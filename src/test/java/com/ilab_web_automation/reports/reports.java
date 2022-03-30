@@ -1,6 +1,7 @@
 package com.ilab_web_automation.reports;
 
 import com.aventstack.extentreports.ExtentReports;
+
 import com.aventstack.extentreports.reporter.ExtentSparkReporter;
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.OutputType;
@@ -16,6 +17,7 @@ public class reports {
     public ExtentSparkReporter spark;
     public ExtentReports extent;
 
+    //Extent reports
     public ExtentReports initializeReports(String reportFileName){
         spark = new ExtentSparkReporter(reportFileName);
         extent = new ExtentReports();
@@ -25,6 +27,7 @@ public class reports {
 
     }
 
+    //A method that captures a screenshot that will be displayed on the report
     public String captureScreenshot(WebDriver driver) throws IOException {
 
         File sFile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);

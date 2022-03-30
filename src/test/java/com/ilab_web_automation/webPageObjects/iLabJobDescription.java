@@ -8,7 +8,7 @@ import org.openqa.selenium.support.pagefactory.AjaxElementLocatorFactory;
 
 
 
-//Locators on the homepage
+//Locators on the jobDescription page
 public class iLabJobDescription {
 
     protected WebDriver driver;
@@ -19,7 +19,7 @@ public class iLabJobDescription {
         PageFactory.initElements(new AjaxElementLocatorFactory(driver, 10), this);
     }
 
-    @FindBy(xpath = "//*[@id=\"wpjb-scroll\"]/div[1]/a")
+    @FindBy(xpath = "//a[text()[contains(.,'Apply Online')]]")
     public WebElement applyButton;
 
 }

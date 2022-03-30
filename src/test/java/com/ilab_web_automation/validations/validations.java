@@ -13,15 +13,16 @@ import org.testng.Assert;
 
 import java.time.Duration;
 
-
 public class validations {
 
     reports repo = new reports();
 
+    //A method that validates the test('iLabTest')
     public void validateApplication(WebDriver driver, ExtentTest node){
 
         iLabApplicationForm appForm = new iLabApplicationForm(driver);
 
+        //Waits for the errror message to be visible
         Wait<WebDriver> wait = new FluentWait<>(driver)
                 .withTimeout(Duration.ofSeconds(5))
                 .pollingEvery(Duration.ofMillis(1000))
@@ -30,6 +31,7 @@ public class validations {
 
         try{
 
+            //Validate the test and report accordingly including screenshots in the report
             String filename = repo.captureScreenshot(driver);
 
             if(appForm.errorMessage.isDisplayed()){
