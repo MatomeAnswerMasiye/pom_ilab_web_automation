@@ -61,7 +61,6 @@ public class webFunctions extends webActions {
 
         }catch (Exception e){
             System.out.println("Failed to submit the application form : " + e.getMessage());
-            Assert.fail();
         }
 
     }

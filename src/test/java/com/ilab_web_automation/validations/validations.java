@@ -46,6 +46,7 @@ public class validations {
             }
 
         }catch (Exception e){
+            Assert.fail("Validation failed");
             e.printStackTrace();
         }
 

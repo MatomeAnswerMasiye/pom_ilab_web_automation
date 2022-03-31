@@ -6,8 +6,6 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.pagefactory.AjaxElementLocatorFactory;
 
-
-
 //Locators on the homepage
 public class iLabHomePage {
 
